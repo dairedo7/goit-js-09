@@ -34,7 +34,7 @@ form.addEventListener('submit', evt => {
 
   let firstDelayVal = Number(firstDelay.value);
 
-  for (let i = 0; i < Number(amount.value); i++) {
+  for (let i = 1; i <= Number(amount.value); i++) {
     createPromise(i, firstDelayVal);
     firstDelayVal += Number(stepDelay.value);
   }

@@ -56,6 +56,8 @@ startBtn.addEventListener('click', () => {
     timerID = setInterval(() => {
         deadLine = new Date(dateTimeInput.value);
         const calcTimeToDeadLine = convertMs(Number(deadLine) - Number(new Date()));
+        startBtn.disabled = true;
+        dateTimeInput.disabled = true;
         console.log(calcTimeToDeadLine);
 
         if (calcTimeToDeadLine.seconds === 0) {
