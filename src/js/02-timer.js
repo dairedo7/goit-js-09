@@ -1,6 +1,8 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix, { Notify } from 'notiflix';
+// import soundmanager2 from 'soundmanager2';
+import sound from '../sounds/alarm-clock.mp3'
 
 const dateTimeInput = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button[data-start');
@@ -64,6 +66,9 @@ startBtn.addEventListener('click', () => {
             clearInterval(timerID);
             Notiflix.Notify.failure('Time is up!');
             body.style.backgroundColor = 'red';
+
+            const audio = new Audio(sound);
+            audio.play();
         }
 
         document.querySelector('[data-days]').textContent = addLeadingZero(calcTimeToDeadLine.days);

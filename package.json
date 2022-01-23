@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "flatpickr": "^4.6.9",
-    "notiflix": "^3.2.2"
+    "notiflix": "^3.2.2",
+    "soundmanager2": "^2.97.20170602"
   }
 }
