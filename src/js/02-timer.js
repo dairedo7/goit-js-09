@@ -62,7 +62,7 @@ startBtn.addEventListener('click', () => {
         dateTimeInput.disabled = true;
         console.log(calcTimeToDeadLine);
 
-        if (calcTimeToDeadLine.seconds === 0) {
+        if (calcTimeToDeadLine.seconds < 0) {
             clearInterval(timerID);
             Notiflix.Notify.failure('Time is up!');
             body.style.backgroundColor = 'red';
